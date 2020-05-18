@@ -1,0 +1,24 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Jordan",
+      "sobrenome": "Santos"
+    },
+    {
+      "id": 2,
+      "nome": "Benedita",
+      "sobrenome": "Lemonnier"
+    },
+    {
+      "nome": "Helena Sophie",
+      "sobrenome": "",
+      "id": 3
+    },
+    {
+      "nome": "Catarina Lemonnier",
+      "sobrenome": "",
+      "id": 4
+    }
+  ]
+}
