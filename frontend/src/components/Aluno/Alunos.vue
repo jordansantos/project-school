@@ -7,7 +7,7 @@
       <button class="btn btnInput" @click="addAluno()">Adicionar</button>
     </div>
     <hr>
-    <table border="1px">
+    <table>
       <thead>
         <th>Mat.</th>
         <th>Nome</th>
@@ -19,7 +19,7 @@
           <td>{{ aluno.id }}</td>
           <td>{{ aluno.nome }}</td>
           <td>{{ aluno.sobrenome }}</td>
-          <td><button class="btn" @click="remover(aluno)">Remover</button></td>
+          <td><button class="btn btn_danger" @click="remover(aluno)">Remover</button></td>
         </tr>
       </tbody>
       <tfoot v-else>
@@ -82,7 +82,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   input, .btnInput { border: 0; padding: 20px; font-size: 1.3em; display: inline; }
-  input { color: #687f7f; }
-  .btnInput { background-color: rgb(116, 115, 115);}
+  input { width: calc(100% - 195px); color: #687f7f; }
+  .btnInput { background-color: rgb(116, 115, 115); width: 150px; }
   .btnInput:hover { padding: 20px; margin: 0; border: 0; }
 </style>
