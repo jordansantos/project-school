@@ -1,9 +1,9 @@
 <template>
   <div class="barra_topo">
     <nav class="margem_principal">
-      <a href="#">Professores</a>
-      <a href="#">Alunos</a>
-      <a href="#">Sobre</a>
+      <router-link to="/professores">Professores</router-link>
+      <router-link to="/alunos">Alunos</router-link>
+      <router-link to="/sobre">Sobre</router-link>
     </nav>
   </div>
 </template>

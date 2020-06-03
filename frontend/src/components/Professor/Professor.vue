@@ -6,17 +6,23 @@
       <thead>
         <th>Mat.</th>
         <th>Nome</th>
-        <th>Opções</th>
+        <th>Alunos</th>
       </thead>
-      <tbody v-if="professores.length">
-        <tr v-for="(professor, index) in professores" :key="index">
+      <tbody v-if="Professores.length">
+        <tr v-for="(professor, index) in Professores" :key="index">
           <td>{{ professor.id }}</td>
-          <td>{{ professor.nome }} {{ professor.sobrenome }}</td>
-          <td>Remover</td>
+          <router-link :to="`/alunos/${professor.id}`" tag="td" style="cursor: pointer;">
+            {{ professor.nome }} {{ professor.sobrenome }}
+          </router-link>
+          <td class="colPequeno">{{ professor.qtdAlunos }}</td>
         </tr>
       </tbody>
       <tfoot v-else>
-        Nenhum Professor Encontrado
+        <tr>
+          <td colspan="3" style="text-align: center">
+            <h5>Nenhum Professor Encontrado</h5>
+          </td>
+        </tr>
       </tfoot>
     </table>
   </div>
@@ -31,16 +37,49 @@
     },
     data() {
       return {
-        professores: [
-          {id: 1, nome: 'Maria'},
-          {id: 2, nome: 'Mariana'},
-          {id: 3, nome: 'Marcela'},
-        ]
+        Professores: [],
+        Alunos: []
+      }
+    },
+    created(){
+      this.$http
+        .get('http://localhost:3000/alunos')
+        .then( res => res.json() )
+        .then( alunos => {
+          this.Alunos = alunos
+          this.carregaProfessores()
+        })
+    },
+    props: {},
+    methods: {
+      getQtdAlunosPorProfessor() {
+        this.Professores.forEach((professor, index) => {
+          professor = {
+            id: professor.id,
+            nome: professor.nome,
+            qtdAlunos: this.Alunos.filter( 
+              aluno => aluno.professor.id == professor.id 
+            ).length
+          }
+          this.Professores[index] = professor
+        });
+      },
+      carregaProfessores() {
+        this.$http
+          .get('http://localhost:3000/professores')
+          .then( res => res.json() )
+          .then( professor => {
+            this.Professores = professor
+            this.getQtdAlunosPorProfessor()
+          })
       }
     }
   }
 </script>
 
 <style scoped>
-
+  .colPequeno {
+    text-align: center;
+    width: 15%;
+  }
 </style>

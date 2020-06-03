@@ -2,23 +2,17 @@
   <div id="app">
     <Nav/>
     <div class="margem_principal">
-      <!-- <Alunos/> -->
-      <Professor/>
+      <router-view :key="$route.fullPath"></router-view>
     </div>
   </div>
 </template>
 
 <script>
-// import Alunos from './components/Aluno/Alunos'
-import Professor from './components/Professor/Professor'
-// import Sobre from './components/Sobre/Sobre'
 import Nav from './components/_nav/Nav'
 
 export default {
   name: 'App',
   components: {
-    // Alunos,
-    Professor,
     Nav
   }
 }

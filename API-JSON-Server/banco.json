@@ -1,14 +1,63 @@
 {
+  "professores": [
+    {
+      "id": 1,
+      "nome": "Maria do Bairro"
+    },
+    {
+      "id": 2,
+      "nome": "Mariana Tavares"
+    },
+    {
+      "id": 3,
+      "nome": "Marcela Montes"
+    }
+  ],
   "alunos": [
     {
       "id": 1,
       "nome": "Jordan",
-      "sobrenome": "Santos"
+      "sobrenome": "Santos",
+      "professor": {
+        "id": 1,
+        "nome": "Maria do Bairro"
+      }
     },
     {
       "id": 2,
       "nome": "Benedita",
-      "sobrenome": "Lemonnier"
+      "sobrenome": "Lemonnier",
+      "professor": {
+        "id": 2,
+        "nome": "Mariana Tavares"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Helena",
+      "sobrenome": "Lemonnier",
+      "professor": {
+        "id": 1,
+        "nome": "Maria do Bairro"
+      }
+    },
+    {
+      "id": 4,
+      "nome": "Catarina",
+      "sobrenome": "Lemonnier",
+      "professor": {
+        "id": 2,
+        "nome": "Mariana Tavares"
+      }
+    },
+    {
+      "id": 5,
+      "nome": "Heloisa",
+      "sobrenome": "Lemonnier",
+      "professor": {
+        "id": 3,
+        "nome": "Marcela Montes"
+      }
     }
   ]
 }

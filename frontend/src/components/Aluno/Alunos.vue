@@ -40,12 +40,15 @@ export default {
     return {
       titulo: 'Aluno',
       nome: '',
+      professorid: this.$route.params.prof_id,
       alunos: []
     }
   },
   created() {
+    let url = this.professorid ? `http://localhost:3000/alunos?professor.id=${this.professorid}` : 'http://localhost:3000/alunos'
+    
     this.$http
-      .get('http://localhost:3000/alunos')
+      .get(url)
       .then( res => res.json() )
       .then( alunos => this.alunos = alunos )
   },
