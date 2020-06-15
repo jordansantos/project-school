@@ -18,6 +18,7 @@
       "id": 1,
       "nome": "Jordan",
       "sobrenome": "Santos",
+      "dataNascimento": "05/03/1986",
       "professor": {
         "id": 1,
         "nome": "Maria do Bairro"
@@ -27,6 +28,7 @@
       "id": 2,
       "nome": "Benedita",
       "sobrenome": "Lemonnier",
+      "dataNascimento": "22/10/1991",
       "professor": {
         "id": 2,
         "nome": "Mariana Tavares"
@@ -36,6 +38,7 @@
       "id": 3,
       "nome": "Helena",
       "sobrenome": "Lemonnier",
+      "dataNascimento": "13/07/2009",
       "professor": {
         "id": 1,
         "nome": "Maria do Bairro"
@@ -45,6 +48,7 @@
       "id": 4,
       "nome": "Catarina",
       "sobrenome": "Lemonnier",
+      "dataNascimento": "14/03/2011",
       "professor": {
         "id": 2,
         "nome": "Mariana Tavares"
@@ -54,6 +58,7 @@
       "id": 5,
       "nome": "Heloisa",
       "sobrenome": "Lemonnier",
+      "dataNascimento": "03/11/2017",
       "professor": {
         "id": 3,
         "nome": "Marcela Montes"

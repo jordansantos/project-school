@@ -21,19 +21,74 @@ export default {
 <style>
   @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
   
-  body { background-color: #eee; font-family: "Montserrat", sans-serif; display: grid; justify-items: center; }
-  body, html { margin: 0; height: 100%; }
-  
-  .margem_principal { width: 50%; margin: auto; }
-  #app { width: 100%; }
-  
-  .btn_danger { background-color: #fa4430; font-size: 0.8em !important; }
-  .btn { padding: 10px 20px; border: 1px solid #000; cursor: pointer; color: rgb(255, 253, 253); font-weight: bold; border-radius: 5px; border-bottom: 3px solid #000; }
-  .btn:hover { text-shadow: 1px 1px 1px #000; border-bottom: 1px solid #000; margin-top: 3px; }
+  body { 
+    background-color: #eee; 
+    display: grid;
+    font-family: "Montserrat", sans-serif;
+    justify-items: center; 
+  }
 
-  table { margin: 0px; padding: 0px; list-style-type: none; width: 100%; }
-  table tr, td { padding: 20px; font-size: 1.3em; background-color: #e0edf4; margin-bottom: 2px; color: #3e5252; }
-  table thead th { background-color: rgb(184, 208, 216) !important; font-size: 1.2em; padding: 10px 0px; text-align: center !important;}
+  body, html { 
+    height: 100%;
+    margin: 0;
+  }
   
-  .colPequeno { width: 5%; text-align: right; background-color: rgb(125, 217, 245); font-weight: bold;}
+  .margem_principal { 
+    margin: auto;
+    width: 50%;
+  }
+  
+  #app {
+    width: 100%;
+  }
+  
+  .btn_danger {
+    background-color: #fa4430;
+    font-size: 0.8em !important;
+  }
+  
+  .btn {
+    border: 1px solid #000;
+    border-bottom: 3px solid #000;
+    border-radius: 5px;
+    color: rgb(255, 253, 253);
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .btn:hover {
+    border-bottom: 1px solid #000;
+    margin-top: 3px;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  table { 
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  table tr, td { 
+    background-color: #e0edf4;
+    color: #3e5252;
+    font-size: 1.3em;
+    padding: 20px;
+    margin-bottom: 2px;
+  }
+  
+  table thead th { 
+    background-color: rgb(184, 208, 216) !important; 
+    font-size: 1.2em; 
+    padding: 10px 0px; 
+    text-align: center !important;
+  }
+  
+  .colPequeno { 
+    background-color: rgb(125, 217, 245); 
+    font: bold;
+    text-align: right;
+    width: 5%; text-align: right;
+  }
 </style>
